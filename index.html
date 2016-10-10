@@ -24,8 +24,21 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<section data-markdown>
+					<script type="text/template">
+					## Page title
+					
+					A paragraph with some text and a [link](http://hakim.se).
+					</script>
+				</section>
 				<section>Slide 1</section>
 				<section>Slide 2</section>
+				<section data-markdown="README.md"  
+         			data-separator="^\n\n\n"  
+         			data-separator-vertical="^\n\n"  
+         			data-separator-notes="^Note:"  
+         			data-charset="iso-8859-15">
+				</section>
 			</div>
 		</div>
 
@@ -36,6 +49,9 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+
+				transition: 'default', // default/cube/page/concave/linear(2d)
+				rollingLinks: true,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
