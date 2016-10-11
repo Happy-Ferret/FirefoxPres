@@ -6,4 +6,4 @@
 
 * Hintergrund
 * Warum Firefox?
-* 
+* Rebranding?
