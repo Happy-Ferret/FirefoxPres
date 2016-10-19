@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script src="js/uitour/mozui.js" type="application/javascript"></script>
+		<script src="js/sweetalert/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/sweetalert/dist/sweetalert.css">
 
 		<title>reveal.js</title>
 
@@ -55,6 +57,12 @@
          			data-separator-notes="^Note:"  
          			data-charset="utf-8">
 				</section>
+				<section data-markdown="slides/5.md"  
+         			data-separator="^\n\n\n"  
+         			data-separator-vertical="---"  
+         			data-separator-notes="^Note:"  
+         			data-charset="utf-8">
+				</section>
 			</div>
 		</div>
 
@@ -70,8 +78,8 @@
 			document.getElementById("demo-info-basic").addEventListener("mouseover", function() {
 				Mozilla.UITour.showInfo(
 					"bookmarks",
-					"Bookmarks",
-					"Bookmarks are pretty cool.",
+					"Lesezeichen",
+					"Lesezeichen sind äußerst nützlich.",
 					"slides/img/globe.png");
 			});
 			document.getElementById("demo-info-basic").addEventListener("mouseout", function() {
@@ -79,10 +87,10 @@
 			});
 
 			function callbackLearnMore() {
-				alert("Mehr Info");
+				sweetAlert("Work in Progress", "Hier gibt es in Kürze mehr Informationen", "success");
 			}
 			function callbackLater() {
-				alert("Bis später!")
+				sweetAlert("Bis später!")
 			}
 			document.getElementById("demo-info-buttons").addEventListener("mouseover", function() {
 				var buttons = [
