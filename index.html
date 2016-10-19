@@ -169,5 +169,26 @@ const RESET_PREVIEW = "ResetBrowserThemePreview";
 
 			Reveal.configure({ slideNumber: true });
 		</script>
+
+		<div id="hidden" style="display: table" >
+    <div id="header">
+        <div id="header-left" style="font-size: 16px; display: table-cell; position: absolute; margin-top: 948px;">https://happy-ferret.github.io/FirefoxPres/index.html</div>
+    </div>
+</div>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+    var header = $('#header').html();
+    if ( window.location.search.match( /print-pdf/gi ) ) {
+        Reveal.addEventListener( 'ready', function( event ) {
+            $('.slide-background').append(header);
+        });
+    }
+    else {
+        $('div.reveal').append(header);
+   }
+</script>
+
 	</body>
 </html>
